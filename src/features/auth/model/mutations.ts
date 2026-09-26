@@ -7,9 +7,10 @@ import { useTranslation } from "react-i18next";
 import { api } from "../api/api";
 import type { IAuthFields, IAuthData } from "./types";
 
-import { userKeys } from "@entities/user";
+import { USER_ID_KEY, userKeys } from "@entities/user";
 import { clearTokens, setTokens } from "@shared/api";
 import { routes } from "@shared/config";
+import { removeStorageItem } from "@shared/lib";
 import type { IApiResponse } from "@shared/types";
 
 export function useLogin() {
@@ -58,6 +59,7 @@ export function useLogout() {
       mutationFn: api.logout,
       onSuccess: () => {
         clearTokens();
+        removeStorageItem(USER_ID_KEY);
         queryClient.removeQueries();
 
         navigate(routes.AUTH, { replace: true });
