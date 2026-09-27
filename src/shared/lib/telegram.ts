@@ -6,10 +6,9 @@ import {
   retrieveLaunchParams,
   retrieveRawInitData,
 } from '@telegram-apps/sdk';
-import eruda from 'eruda';
 
 if (import.meta.env.DEV) {
-  eruda.init();
+  void import('eruda').then(({ default: eruda }) => eruda.init());
 }
 
 export const insideTelegram = isTMA();
