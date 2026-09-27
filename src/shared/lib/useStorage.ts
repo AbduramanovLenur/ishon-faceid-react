@@ -1,6 +1,6 @@
 import { useSyncExternalStore } from "react";
 
-const EVENT = "ishon:storage";
+const EVENT = "storage:change";
 
 const notify = () => window.dispatchEvent(new Event(EVENT));
 
