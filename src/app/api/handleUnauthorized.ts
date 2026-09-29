@@ -2,7 +2,7 @@ import { api } from "@features/auth";
 
 import { clearTokens } from "@shared/api";
 import { routes } from "@shared/config";
-import { insideTelegram } from "@shared/lib/telegram";
+import { insideTelegram } from "@shared/lib";
 
 export function handleUnauthorized(): void {
   if (window.location.pathname === routes.AUTH) {
