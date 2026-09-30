@@ -17,3 +17,4 @@ export { rejectionReasons } from "./rejectionReasons";
 export { getDaysLabels } from "./daysLabels";
 export { default as i18n } from "./i18n";
 export { antdLocales } from "./antdLocales";
+export { getNavigations } from "./navigations";

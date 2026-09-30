@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 
 import { useLogout } from "@features/auth";
 import { useUser } from "@entities/user";
-import { getNavigations } from "@shared/config/navigations";
+import { getNavigations } from "@shared/config";
 
 import styles from "./SidebarNav.module.scss";
 
