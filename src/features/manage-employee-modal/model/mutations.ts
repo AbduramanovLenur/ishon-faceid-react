@@ -1,6 +1,7 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import type { AxiosError } from "axios";
 import { App } from "antd";
+import { useTranslation } from "react-i18next";
 
 import { api } from "../api/api";
 import type { ICreateEmployeeFields, IUpdateEmployeeFields } from "./types";
@@ -10,6 +11,7 @@ import { todaysPresenceKeys } from "@entities/todays-presence";
 import type { IApiResponse } from "@shared/types";
 
 export function useCreateEmployee() {
+  const { t } = useTranslation();
   const { message } = App.useApp();
   const queryClient = useQueryClient();
 
@@ -37,12 +39,12 @@ export function useCreateEmployee() {
           queryKey: todaysPresenceKeys.excel()
         });
         
-        message.success('Xodim yaratildi');
+        message.success(t("employees.created"));
       },
       onError: (error) => {
         const msg =
           error.response?.data?.error?.message ??
-          "Xodim yaratishda xatolik yuz berdi";
+          t("employees.createError");
           
         message.error(msg);
       },
@@ -51,6 +53,7 @@ export function useCreateEmployee() {
 }
 
 export function useUpdateEmployee() {
+  const { t } = useTranslation();
   const { message } = App.useApp();
   const queryClient = useQueryClient();
 
@@ -81,12 +84,12 @@ export function useUpdateEmployee() {
           queryKey: todaysPresenceKeys.excel()
         });
         
-        message.success('Xodim yangilandi');
+        message.success(t("employees.updated"));
       },
       onError: (error) => {
         const msg =
           error.response?.data?.error?.message ??
-          "Xodim yangilashda xatolik yuz berdi";
+          t("employees.updateError");
           
         message.error(msg);
       },

@@ -13,7 +13,16 @@
     "revoke": "Отменить",
     "exportExcel": "Скачать в Excel",
     "all": "Все",
-    "date": "Дата"
+    "date": "Дата",
+    "fileUploaded": "Файл загружен",
+    "fileUploadError": "Ошибка при загрузке файла",
+    "cameraEnabled": "Камера включена",
+    "fetchError": "Ошибка при получении данных",
+    "selectDate": "Выберите дату"
+  },
+  "notFound": {
+    "subTitle": "Страница не найдена",
+    "backHome": "Вернуться на главную"
   },
   "logs": {
     "title": "Журнал входов",
@@ -80,7 +89,11 @@
     "search": "Поиск объектов...",
     "deleted": "Объект удалён",
     "deleteError": "Ошибка при удалении объекта",
-    "deleteConfirmTitle": "Удалить объект?"
+    "deleteConfirmTitle": "Удалить объект?",
+    "created": "Объект создан",
+    "createError": "Ошибка при создании объекта",
+    "updated": "Объект обновлён",
+    "updateError": "Ошибка при обновлении объекта"
   },
   "dashboard": {
     "title": "Панель управления",
@@ -134,7 +147,15 @@
     "missedDays": "Пропущенные дни",
     "lateArrivals": "Опоздания",
     "earlyLeaves": "Ранние уходы",
-    "notLeftDays": "Выход не отмечен"
+    "notLeftDays": "Выход не отмечен",
+    "created": "Сотрудник создан",
+    "createError": "Ошибка при создании сотрудника",
+    "updated": "Сотрудник обновлён",
+    "updateError": "Ошибка при обновлении сотрудника",
+    "accessGranted": "Права доступа успешно предоставлены",
+    "grantAccessError": "Ошибка при предоставлении прав доступа",
+    "passwordReset": "Пароль обновлён",
+    "passwordResetError": "Ошибка при обновлении пароля"
   },
   "eventTypes": {
     "entry": "Вход",
@@ -179,7 +200,11 @@
     "employeeLimit": "Количество сотрудников",
     "employeeLimitRequired": "Введите количество сотрудников",
     "details": "Детали компании",
-    "notFound": "Данные компании не найдены"
+    "notFound": "Данные компании не найдены",
+    "created": "Компания создана",
+    "createError": "Ошибка при создании компании",
+    "updated": "Компания обновлена",
+    "updateError": "Ошибка при обновлении компании"
   },
   "directors": {
     "create": "Создать директора",
@@ -283,7 +308,9 @@
     "newPasswordRequired": "Введите новый пароль",
     "newPasswordMin": "Пароль должен содержать минимум 8 символов",
     "confirmNewPassword": "Подтвердите новый пароль",
-    "confirmNewPasswordRequired": "Подтвердите новый пароль"
+    "confirmNewPasswordRequired": "Подтвердите новый пароль",
+    "updated": "Пароль обновлён",
+    "updateError": "Ошибка при обновлении пароля"
   },
   "days": {
     "monday": "Понедельник",
@@ -293,5 +320,10 @@
     "friday": "Пятница",
     "saturday": "Суббота",
     "sunday": "Воскресенье"
+  },
+  "errorBoundary": {
+    "title": "Что-то пошло не так",
+    "subTitle": "Попробуйте обновить страницу",
+    "reload": "Обновить страницу"
   }
 }

@@ -2,6 +2,7 @@ import { useRef, useState, type FC } from "react";
 import Webcam from "react-webcam";
 import { CameraOutlined, DeleteOutlined } from "@ant-design/icons";
 import { message } from "antd";
+import { useTranslation } from "react-i18next";
 
 import { dataUrlToFile } from "@shared/utils";
 
@@ -18,6 +19,7 @@ const WebcamCapture: FC<IWebcamCaptureProps> = ({
   onDelete,
   className,
 }) => {
+  const { t } = useTranslation();
   const webcamRef = useRef<Webcam>(null);
   const [cameraActive, setCameraActive] = useState(false);
   const [preview, setPreview] = useState<string | null>(null);
@@ -36,7 +38,7 @@ const WebcamCapture: FC<IWebcamCaptureProps> = ({
   };
 
   const handleUserMedia = () => {
-    message.success("Kamera yoqildi");
+    message.success(t("common.cameraEnabled"));
   };
 
   const handleUserMediaError = (error: string | DOMException) => {

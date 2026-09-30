@@ -1,6 +1,8 @@
 import { Component, type ReactNode } from 'react';
 import { Button, Result } from 'antd';
 
+import i18n from '@shared/config/i18n';
+
 interface Props {
   children: ReactNode;
 }
@@ -28,11 +30,11 @@ class ErrorBoundary extends Component<Props, State> {
       return (
         <Result
           status="error"
-          title="Nimadir noto'g'ri ketdi"
-          subTitle="Sahifani yangilab ko'ring"
+          title={i18n.t('errorBoundary.title')}
+          subTitle={i18n.t('errorBoundary.subTitle')}
           extra={
             <Button type="primary" onClick={this.handleReload}>
-              Sahifani yangilash
+              {i18n.t('errorBoundary.reload')}
             </Button>
           }
         />

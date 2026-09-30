@@ -2,6 +2,7 @@ import type { FC } from "react";
 
 import { DatePicker, type DatePickerProps } from "antd";
 import dayjs, { type Dayjs } from "dayjs";
+import { useTranslation } from "react-i18next";
 
 import { useQueryParams } from "@shared/lib";
 
@@ -18,6 +19,7 @@ const DateFilter: FC<IDateFilterProps> = ({
   defaultValue = "",
   currentValue = "",
 }) => {
+  const { t } = useTranslation();
   const { set, remove } = useQueryParams();
 
   const onChangeHandle: DatePickerProps<Dayjs>["onChange"] = (date) => {
@@ -32,7 +34,7 @@ const DateFilter: FC<IDateFilterProps> = ({
   return (
     <DatePicker
       className={className}
-      placeholder="Sana tanlang"
+      placeholder={t("common.selectDate")}
       onChange={onChangeHandle}
       format="DD-MM-YYYY"
       defaultValue={

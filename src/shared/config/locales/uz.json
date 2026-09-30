@@ -13,7 +13,16 @@
     "revoke": "Bekor qilish",
     "exportExcel": "Excelga yuklab olish",
     "all": "Barchasi",
-    "date": "Sana"
+    "date": "Sana",
+    "fileUploaded": "Fayl yuklandi",
+    "fileUploadError": "Faylni yuklashda xatolik yuz berdi",
+    "cameraEnabled": "Kamera yoqildi",
+    "fetchError": "Maʼlumotlarni olishda xatolik yuz berdi",
+    "selectDate": "Sana tanlang"
+  },
+  "notFound": {
+    "subTitle": "Sahifa topilmadi",
+    "backHome": "Bosh sahifaga qaytish"
   },
   "logs": {
     "title": "Kirish jurnali",
@@ -80,7 +89,11 @@
     "search": "Obyektlarni qidirish...",
     "deleted": "Obyekt o'chirildi",
     "deleteError": "Obyektni o'chirishda xatolik yuz berdi",
-    "deleteConfirmTitle": "Obyektni o'chirish kerakmi?"
+    "deleteConfirmTitle": "Obyektni o'chirish kerakmi?",
+    "created": "Obyekt yaratildi",
+    "createError": "Obyektni yaratishda xatolik yuz berdi",
+    "updated": "Obyekt yangilandi",
+    "updateError": "Obyektni yangilashda xatolik yuz berdi"
   },
   "dashboard": {
     "title": "Dashboard",
@@ -134,7 +147,15 @@
     "missedDays": "Qoldirilgan kunlar",
     "lateArrivals": "Kechikib kelishlar",
     "earlyLeaves": "Erta ketishlar",
-    "notLeftDays": "Chiqish qayd etilmagan"
+    "notLeftDays": "Chiqish qayd etilmagan",
+    "created": "Xodim yaratildi",
+    "createError": "Xodimni yaratishda xatolik yuz berdi",
+    "updated": "Xodim yangilandi",
+    "updateError": "Xodimni yangilashda xatolik yuz berdi",
+    "accessGranted": "Kirish huquqlari muvaffaqiyatli berildi",
+    "grantAccessError": "Kirish huquqlarini berishda xatolik yuz berdi",
+    "passwordReset": "Parol yangilandi",
+    "passwordResetError": "Parolni yangilashda xatolik yuz berdi"
   },
   "eventTypes": {
     "entry": "Kirish",
@@ -179,7 +200,11 @@
     "employeeLimit": "Xodimlar soni",
     "employeeLimitRequired": "Xodimlar sonini kiriting",
     "details": "Kompaniya tafsilotlari",
-    "notFound": "Kompaniya ma'lumotlari topilmadi"
+    "notFound": "Kompaniya ma'lumotlari topilmadi",
+    "created": "Kompaniya yaratildi",
+    "createError": "Kompaniyani yaratishda xatolik yuz berdi",
+    "updated": "Kompaniya yangilandi",
+    "updateError": "Kompaniyani yangilashda xatolik yuz berdi"
   },
   "directors": {
     "create": "Direktor yaratish",
@@ -283,7 +308,9 @@
     "newPasswordRequired": "Yangi parolni kiriting",
     "newPasswordMin": "Parol kamida 8 ta belgidan iborat bo'lishi kerak",
     "confirmNewPassword": "Yangi parolni tasdiqlash",
-    "confirmNewPasswordRequired": "Yangi parolni tasdiqlang"
+    "confirmNewPasswordRequired": "Yangi parolni tasdiqlang",
+    "updated": "Parol yangilandi",
+    "updateError": "Parolni yangilashda xatolik yuz berdi"
   },
   "days": {
     "monday": "Dushanba",
@@ -293,5 +320,10 @@
     "friday": "Juma",
     "saturday": "Shanba",
     "sunday": "Yakshanba"
+  },
+  "errorBoundary": {
+    "title": "Nimadir noto'g'ri ketdi",
+    "subTitle": "Sahifani yangilab ko'ring",
+    "reload": "Sahifani yangilash"
   }
 }

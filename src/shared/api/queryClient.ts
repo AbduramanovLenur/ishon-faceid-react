@@ -2,12 +2,14 @@ import { QueryCache, QueryClient } from '@tanstack/react-query';
 import { message } from 'antd';
 import axios from 'axios';
 
+import i18n from '../config/i18n';
+
 const getErrorMessage = (error: unknown): string => {
   if (axios.isAxiosError(error)) {
-    return (error.response?.data?.message || 'Maʼlumotlarni olishda xatolik yuz berdi');
+    return (error.response?.data?.message || i18n.t('common.fetchError'));
   }
 
-  return 'Maʼlumotlarni olishda xatolik yuz berdi';
+  return i18n.t('common.fetchError');
 };
 
 export const queryClient = new QueryClient({

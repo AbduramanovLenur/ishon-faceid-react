@@ -1,6 +1,7 @@
 import { App } from "antd";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import type { AxiosError } from "axios";
+import { useTranslation } from "react-i18next";
 
 import type { IUpdateAccessFields } from "./types";
 import { api } from "../api/api";
@@ -9,6 +10,7 @@ import { employeesKeys, type IEmployeeAdmin } from "@entities/employees";
 import type { IApiResponse } from "@shared/types";
 
 export function useGrantAccess() {
+  const { t } = useTranslation();
   const { message } = App.useApp();
   const queryClient = useQueryClient();
 
@@ -30,12 +32,12 @@ export function useGrantAccess() {
           queryKey: employeesKeys.excel()
         });
 
-        message.success('Kirish huquqlari muvaffaqiyatli berildi');
+        message.success(t("employees.accessGranted"));
       },
       onError: (error) => {
         const msg =
           error.response?.data?.error?.message ??
-          "Kirish huquqlarini berishda xatolik yuz berdi";
+          t("employees.grantAccessError");
           
         message.error(msg);
       },
