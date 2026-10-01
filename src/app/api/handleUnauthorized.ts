@@ -17,12 +17,5 @@ export function handleUnauthorized(): void {
     return;
   }
 
-  api
-    .logout()
-    .then(() => {
-      clearTokens();
-
-      window.location.href = routes.AUTH;
-    })
-    .catch(() => undefined);
+  api.logout();
 }
