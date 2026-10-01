@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 
 import { api } from "../api/api";
 
+import { employeesKeys } from "@entities/employees";
 import { objectsKeys } from "@entities/objects";
 import type { IApiResponse } from "@shared/types";
 
@@ -26,6 +27,12 @@ export const useDeleteObject = () => {
       });
       queryClient.invalidateQueries({
         queryKey: objectsKeys.excel()
+      });
+      queryClient.invalidateQueries({
+        queryKey: employeesKeys.collection()
+      });
+      queryClient.invalidateQueries({
+        queryKey: employeesKeys.excel()
       });
 
       message.success(t("objects.deleted"));
