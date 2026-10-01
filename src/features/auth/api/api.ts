@@ -2,7 +2,8 @@ import { endpoints } from "./endpoints";
 import type { IAuthFields, IAuthData } from "../model/types";
 
 import type { IApiResponse } from "@shared/types";
-import { axiosInstance } from "@shared/api";
+import { axiosInstance, clearTokens } from "@shared/api";
+import { routes } from "@shared/config";
 
 export const api = {
   login: (values: IAuthFields) => {
@@ -14,7 +15,11 @@ export const api = {
   logout: () => {
     return axiosInstance
       .post(endpoints.LOGOUT, undefined, { skipAuthRedirect: true })
-      .then(() => undefined);
+      .then(() => {
+        clearTokens();
+  
+        window.location.href = routes.AUTH;
+      })
   },
 
   restoreSession: () => {
